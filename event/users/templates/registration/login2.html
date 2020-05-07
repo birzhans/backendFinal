@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Users/birzhan/Desktop/event/event/users/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Users/birzhan/Desktop/event/event/users/style/login.css">
+    <script src="/Users/birzhan/Desktop/event/event/users/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <title>Log in</title>
+</head>
+
+<body>
+    <div class="backg">
+    </div>
+    <div class="container logIn-Out">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8" style="margin-top:170px">
+                <div class="row justify-content-center">
+                    <h3 style="color:white; margin-bottom: 40px; ">login</h3>
+                </div>
+                <div class="row justify-content-center">
+                    <form method="POST" action="{% url 'login' %}">
+						{% csrf_token %}
+						
+							<p>Username {{ form.username }}</p>
+							<p>Password {{ form.password }}</p>
+							<input type="submit" name="" value="login">
+							<input type="hidden" name="next" value="{{ next }}">
+
+						
+					</form>
+                </div>
+                <div class="row justify-content-center mb-2">
+                    <a href="">Forgot password?</a>
+                </div>
+                <div class="row justify-content-center">
+                    <a href="">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

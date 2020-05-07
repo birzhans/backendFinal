@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/event-card.css">
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <title>Create event</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-12" style="margin-top: 100px ;background-color: whitesmoke; border-radius: 10px; padding: 10px;">
+                <form action="">
+                    <div class="row">
+                        <div class="col-7">
+                            <!--------------------------------EVENT CREATION FORM------------------------------>
+
+                            <label for="">Does this playground rent?</label>
+                            <select class="form-control mb-3">
+                                <option>Rent</option>
+                                <option>Free playground</option>
+                            </select>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload img of playground optionally</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
+                            </div>
+
+
+
+                            <label for="">if free palyground just dont fill card</label>
+
+
+
+                            <div class="form-group">
+                                <label for="inputAddress2">Address</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">card</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                                <label for="">Choose playgrounds of your city</label>
+                                <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+
+
+                            </div>
+                        </div>
+                        <!-----------------------------------------MAP--------------------------------- -->
+
+                        <div class="col-5 maps" style="margin-top: 30px;">
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <div class="form-group">
+                                <label for="inputAddress2">Enter location of playground</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Description of event</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="well form-group">
+                            <label for=""> Write time and date of event "MM/dd/yyyy HH:mm:ss PP"</label>
+                            <div id="datetimepicker2" class="input-append">
+                                <input data-format="MM/dd/yyyy HH:mm:ss PP" class="form-control" type="text"></input>
+                                <span class="add-on">
+                                <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                                </i>
+                              </span>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(function() {
+                                $('#datetimepicker2').datetimepicker({
+                                    language: 'en',
+                                    pick12HourFormat: true
+                                });
+                            });
+                        </script>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{% extends "header.html" %}
+
+{% block title %}
+	cities 
+{% endblock %}
+
+{% block content %}
+<h4>Find events in these cities</h4>
+<h5>Cannot find your city?<a href="{% url 'add_city' %}">add city</a></h5>
+	{% for city in cities %}
+	<ul>
+		<li>
+			<p><a href="{{city.get_absolute_url}}">{{city.title}}</a></p> 
+		</li>
+	</ul>
+		
+	{% endfor %}
+{% endblock %}

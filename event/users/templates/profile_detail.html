@@ -1,0 +1,13 @@
+{% extends "header.html" %}
+
+{% block title %}
+	{{profile.user.username}} 
+{% endblock %}
+
+{% block content %}
+<h1>{{profile.user.username}}</h1>
+    <p>{{profile.address}}</p>
+    <p>{{profile.email}}</p>
+    <p>contact: {{profile.contact}}</p>
+    <img src="{{profile.image.url}}" style="height: 200px">
+{% endblock %}

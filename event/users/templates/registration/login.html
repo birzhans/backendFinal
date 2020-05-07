@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+
+{% block title %}
+	Login 
+{% endblock %}
+
+{% block content %}
+<div style="margin: 100px;">
+{% if form.errors %}
+<p>There is something wrong</p>
+{% endif %}
+
+{% if next %}
+<p>You can access that page</p>
+{% endif %}
+
+<form method="POST" action="{% url 'login' %}">
+	{% csrf_token %}
+
+		<p>Username {{ form.username }}</p>
+		<p>Password {{ form.password }}</p>
+		<input type="submit" name="" value="login">
+		<input type="hidden" name="next" value="{{ next }}">
+
+	
+</form>
+{% endblock %}	
+</div>
+
+

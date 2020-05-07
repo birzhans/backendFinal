@@ -1,0 +1,17 @@
+{% extends "header.html" %}
+
+{% block title %}
+	Users 
+{% endblock %}
+
+{% block content %}
+	{% for profile in profiles %}
+	<ul>
+		<li>
+			<p><a href="{{profile.get_absolute_url}}">{{profile.user.username}}</a></p>
+			<img src="{{profile.image.url}}" style="height: 100px">
+		</li>
+	</ul>
+		
+	{% endfor %}
+{% endblock %}

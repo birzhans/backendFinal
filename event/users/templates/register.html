@@ -1,0 +1,20 @@
+{% extends "header.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+	Register  
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="{% url 'register' %}" style="margin-left: 300px; margin-right: 500px;">
+	{% csrf_token %}
+
+	{% if form.errors %}
+	<p>There is something wrong</p>
+	{% endif %}
+
+	{{ form|crispy }}
+
+	<input type="submit" name="register">
+</form>
+{% endblock %}
+	

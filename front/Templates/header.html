@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <title>
+        {% block title %}
+        Sport Events  
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-my" style="background:  linear-gradient(#6771fb, #4e43f9);">
+        <a href="#" class="navbar-brand mr-10">PlayMates</a>
+        <!-- Home link -->
+
+        <!----------------------------------------------------Navigation------------------------------------------------->
+        <div class="collapse navbar-collapse navbarMenu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="links nav-link" href="#">Events</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="links nav-link" href="#">Chat</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="links nav-link" href="#">Create Event</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!----------------------------------------------------search form----------------------------------------------->
+
+        <form class="form-inline navbar-collapse collapse navbarMenu justify-content-end ml-auto" style="margin-right:10px ;">
+            <input class="form-control" type="search" style="min-width: 30%; max-width: 70%; margin-right: 5px;" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-1 my-sm-0" type="submit">Search</button>
+        </form>
+
+
+        <!----------------------------------------------------profile  part------------------------------------------->
+        <div class="navbar-collapse collapse justify-content-end" style=" max-width:270px">
+            <ul class="navbar-nav " style="margin-left:30px ; margin-right:30px;">
+                <li class="nav-item ">
+                    <img src="../Images/1.png" style="border-radius: 50%; width: 35px; height: 35px;" alt="">
+                </li>
+                <li class="nav-item ">
+                    <a class="links nav-link" href="#">Username</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="links nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarMenu" aria-controls="navbarMenu=" false " aria-label="Toggle navigation ">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+    </nav>
+    {% block content %}
+{% endblock %}
+
+        <!----------------------------------------------------Scripts------------------------------------------------->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js "
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 "
+        crossorigin="anonymous "></script>
+</body>
+
+</html>

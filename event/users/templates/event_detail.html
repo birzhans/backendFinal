@@ -1,0 +1,27 @@
+{% extends "header.html" %}
+
+{% block title %}
+	{{event.title}} 
+{% endblock %}
+
+{% block content %}
+<h1>{{event.title}}</h1>
+    <p>{{event.description}}</p>
+    <p>Total participants: {{event.total_participants}} Current participants: {{event.current_participants}}</p>
+    <p>{{event.time}}</p>
+    <p>contact: {{event.contact}}</p>
+
+    {% for city in event.city.all %}
+		    <a href="#" class="card-link">{{city.title}}</a>
+		    {% endfor %}
+
+		    {% for tag in event.tags.all %}
+		    <a href="#" class="card-link">{{tag.title}}</a>
+		    {% endfor %}
+		    <p>Participants:  {% for profile in event.participants.all %}
+		    <a href="{{profile.get_absolute_url}}" class="card-link"> {{profile.user}}</a>
+
+		    {% endfor %}</p>
+		    <a href="{%url 'add_user_event' event.slug%}">Add event</a>
+	
+{% endblock %}

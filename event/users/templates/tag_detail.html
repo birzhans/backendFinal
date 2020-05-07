@@ -1,0 +1,33 @@
+{% extends "header.html" %}
+
+{% block title %}
+	{{tag.title}} 
+{% endblock %}
+
+{% block content %}
+<h1>{{tag.title}}</h1>
+
+
+    {% for event in tag.events.all %}
+    <div class="card" style="width: 28rem;">
+		  <div class="card-body">
+		    <a href="{{event.get_absolute_url}}"><h5 class="card-title">{{event.title}}</h5></a>
+		    <h6 class="card-subtitle mb-2 text-muted">{% for city in event.city.all %}
+		    <a href="{{city.get_absolute_url}}" class="card-link">{{city.title}}</a>
+		    {% endfor %}</h6>
+		    <p class="card-text">{{event.description}}</p>
+		    <p class="card-text">{{event.time}}</p>
+		    <p class="card-text">{{event.contact}}</p>
+
+		    {% for tag in event.tags.all %}
+		    <a href="#" class="card-link">{{tag.title}}</a>
+		    {% endfor %}
+		    <p>Participants:  {% for profile in event.participants.all %}
+		    <a href="{{profile.get_absolute_url}}" class="card-link"> {{profile.user}}</a>
+		    {% endfor %}</p>
+		  </div>
+		</div>
+		<br>
+    {% endfor %}
+	
+{% endblock %}

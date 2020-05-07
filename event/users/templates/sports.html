@@ -1,0 +1,18 @@
+{% extends "header.html" %}
+
+{% block title %}
+	Sports 
+{% endblock %}
+
+{% block content %}
+<h4>Find events in these type of sports</h4>
+<h5>Cannot find your sport?<a href="{% url 'add_sport' %}">add sport</a></h5>
+	{% for sport in sports %}
+	<ul>
+		<li>
+			<p><a href="{{sport.get_absolute_url}}">{{sport.title}}</a></p> 
+		</li>
+	</ul>
+		
+	{% endfor %}
+{% endblock %}
