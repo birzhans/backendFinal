@@ -1,14 +1,16 @@
 {% extends "header.html" %}
 {% load crispy_forms_tags %}
-
+{%load static%}
 {% block title %}
 	Add Sport
 {% endblock %}
 
 {% block content %}
+<h1>Add new sport Tag</h1>
 <form method="POST">
 	{{ form|crispy }}
 	{% csrf_token %}
 	<button class="btn btn-primary" type="submit">Send</button>
 </form>
+<img src="{% static 'Images/cover_image.jpg' %}" style="height: 400px;">
 {% endblock %}

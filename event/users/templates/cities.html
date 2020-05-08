@@ -1,12 +1,12 @@
 {% extends "header.html" %}
-
+{%load static%}
 {% block title %}
 	cities 
 {% endblock %}
 
 {% block content %}
 <h4>Find events in these cities</h4>
-<h5>Cannot find your city?<a href="{% url 'add_city' %}">add city</a></h5>
+<h5>Cannot find your city? <a href="{% url 'add_city' %}" > add city</a></h5>
 	{% for city in cities %}
 	<ul>
 		<li>
@@ -15,4 +15,6 @@
 	</ul>
 		
 	{% endfor %}
+<img src="{% static 'Images/city.png' %}" style="height: 400px;">
+
 {% endblock %}

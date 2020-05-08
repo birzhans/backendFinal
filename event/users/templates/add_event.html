@@ -6,6 +6,8 @@
 {% endblock %}
 
 {% block content %}
+<h1>Add new event Tag</h1>
+
 <form method="POST">
 	{{ form|crispy }}
 	{% csrf_token %}

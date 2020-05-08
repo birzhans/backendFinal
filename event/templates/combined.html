@@ -1,14 +1,13 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1-dist/css/bootstrap.min.css' %}">
-    <script src="{% static 'bootstrap-4.4.1-dist/js/bootstrap.min.js' %}"></script>
-    <!-- <link rel="stylesheet" href="static/style/Combined.css"> -->
-    <link rel="stylesheet" type="text/css" href="{% static 'style/Combined.css' %}">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Combined.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>
         {% block title %}
@@ -112,7 +111,7 @@
                         <span class="menu-collapsed">Users</span>
                     </a>
                 </div>
-                <a href="{% url 'index' %}" class="bg-dark list-group-item list-group-item-action">
+                <a href="{% url 'profile' %}" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-tasks fa-fw mr-3"></span>
                         <span class="menu-collapsed">Events</span>
@@ -123,25 +122,25 @@
                     <small>OPTIONS</small>
                 </li>
                 <!-- /END Separator -->
-                <a href="{% url 'add_event' %}" class="bg-dark list-group-item list-group-item-action">
+                <a href="#" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-calendar fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Add event</span>
+                        <span class="menu-collapsed">Calendar</span>
                     </div>
                 </a>
-                <a href="{% url 'add_city' %}" class="bg-dark list-group-item list-group-item-action">
+                <a href="#" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="fa fa-building-o fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Add city <span class="badge badge-pill badge-primary ml-2">5</span></span>
+                        <span class="fa fa-envelope-o fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Messages <span class="badge badge-pill badge-primary ml-2">5</span></span>
                     </div>
                 </a>
                 <!-- Separator without title -->
                 <li class="list-group-item sidebar-separator menu-collapsed"></li>
                 <!-- /END Separator -->
-                <a href="{% url 'add_sport' %}" class="bg-dark list-group-item list-group-item-action">
+                <a href="#" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="fa fa-futbol-o fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Add sport</span>
+                        <span class="fa fa-question fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Help</span>
                     </div>
                 </a>
 
@@ -167,10 +166,10 @@
         <!----------------------------------------------------Scripts------------------------------------------------->
 
 
-        <script src="static/js/jquery.min.js "></script>
-        <script src="static/js/popper.js "></script>
-        <script src="static/js/bootstrap.min.js "></script>
-        <script src="static/js/main.js "></script>
+        <script src="js/jquery.min.js "></script>
+        <script src="js/popper.js "></script>
+        <script src="js/bootstrap.min.js "></script>
+        <script src="js/main.js "></script>
 </body>
 
 </html>
